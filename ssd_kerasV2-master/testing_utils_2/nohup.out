@@ -1,0 +1,233 @@
+2019-05-31 01:52:13.087101: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-31 01:52:13.221358: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-31 01:52:13.221879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.52GiB
+2019-05-31 01:52:13.221891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-05-31 01:52:14.195902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-31 01:52:14.195931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-05-31 01:52:14.195937: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-05-31 01:52:14.196089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10174 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Downloading data from https://github.com/fchollet/deep-learning-models/releases/download/v0.6/mobilenet_1_0_224_tf_no_top.h5
+
+    8192/17225924 [..............................] - ETA: 6:00
+   40960/17225924 [..............................] - ETA: 2:24
+  106496/17225924 [..............................] - ETA: 1:23
+  245760/17225924 [..............................] - ETA: 47s 
+  458752/17225924 [..............................] - ETA: 38s
+ 1097728/17225924 [>.............................] - ETA: 17s
+ 1294336/17225924 [=>............................] - ETA: 17s
+ 1531904/17225924 [=>............................] - ETA: 15s
+ 1761280/17225924 [==>...........................] - ETA: 14s
+ 1777664/17225924 [==>...........................] - ETA: 15s
+ 2023424/17225924 [==>...........................] - ETA: 14s
+ 2269184/17225924 [==>...........................] - ETA: 13s
+ 2523136/17225924 [===>..........................] - ETA: 12s
+ 2531328/17225924 [===>..........................] - ETA: 13s
+ 2768896/17225924 [===>..........................] - ETA: 12s
+ 2785280/17225924 [===>..........................] - ETA: 12s
+ 3031040/17225924 [====>.........................] - ETA: 11s
+ 3047424/17225924 [====>.........................] - ETA: 12s
+ 3309568/17225924 [====>.........................] - ETA: 11s
+ 3571712/17225924 [=====>........................] - ETA: 10s
+ 3588096/17225924 [=====>........................] - ETA: 11s
+ 3850240/17225924 [=====>........................] - ETA: 10s
+ 4128768/17225924 [======>.......................] - ETA: 10s
+ 4390912/17225924 [======>.......................] - ETA: 9s 
+ 4407296/17225924 [======>.......................] - ETA: 10s
+ 4669440/17225924 [=======>......................] - ETA: 9s 
+ 4685824/17225924 [=======>......................] - ETA: 9s
+ 4947968/17225924 [=======>......................] - ETA: 9s
+ 4964352/17225924 [=======>......................] - ETA: 9s
+ 5226496/17225924 [========>.....................] - ETA: 8s
+ 5242880/17225924 [========>.....................] - ETA: 9s
+ 5521408/17225924 [========>.....................] - ETA: 8s
+ 5799936/17225924 [=========>....................] - ETA: 8s
+ 5816320/17225924 [=========>....................] - ETA: 8s
+ 6078464/17225924 [=========>....................] - ETA: 8s
+ 6094848/17225924 [=========>....................] - ETA: 8s
+ 6356992/17225924 [==========>...................] - ETA: 7s
+ 6373376/17225924 [==========>...................] - ETA: 7s
+ 6651904/17225924 [==========>...................] - ETA: 7s
+ 6668288/17225924 [==========>...................] - ETA: 7s
+ 6930432/17225924 [===========>..................] - ETA: 7s
+ 6946816/17225924 [===========>..................] - ETA: 7s
+ 7208960/17225924 [===========>..................] - ETA: 7s
+ 7225344/17225924 [===========>..................] - ETA: 7s
+ 7503872/17225924 [============>.................] - ETA: 6s
+ 7577600/17225924 [============>.................] - ETA: 6s
+ 7798784/17225924 [============>.................] - ETA: 6s
+ 8060928/17225924 [=============>................] - ETA: 6s
+ 8077312/17225924 [=============>................] - ETA: 6s
+ 8355840/17225924 [=============>................] - ETA: 6s
+ 8429568/17225924 [=============>................] - ETA: 6s
+ 8650752/17225924 [==============>...............] - ETA: 5s
+ 8658944/17225924 [==============>...............] - ETA: 5s
+ 8912896/17225924 [==============>...............] - ETA: 5s
+ 8937472/17225924 [==============>...............] - ETA: 5s
+ 9191424/17225924 [===============>..............] - ETA: 5s
+ 9216000/17225924 [===============>..............] - ETA: 5s
+ 9281536/17225924 [===============>..............] - ETA: 5s
+ 9510912/17225924 [===============>..............] - ETA: 5s
+ 9773056/17225924 [================>.............] - ETA: 5s
+ 9789440/17225924 [================>.............] - ETA: 5s
+10067968/17225924 [================>.............] - ETA: 4s
+10084352/17225924 [================>.............] - ETA: 4s
+10346496/17225924 [=================>............] - ETA: 4s
+10362880/17225924 [=================>............] - ETA: 4s
+10625024/17225924 [=================>............] - ETA: 4s
+10641408/17225924 [=================>............] - ETA: 4s
+10723328/17225924 [=================>............] - ETA: 4s
+10919936/17225924 [==================>...........] - ETA: 4s
+10936320/17225924 [==================>...........] - ETA: 4s
+11198464/17225924 [==================>...........] - ETA: 4s
+11214848/17225924 [==================>...........] - ETA: 4s
+11681792/17225924 [===================>..........] - ETA: 3s
+11698176/17225924 [===================>..........] - ETA: 3s
+11894784/17225924 [===================>..........] - ETA: 3s
+11911168/17225924 [===================>..........] - ETA: 3s
+12115968/17225924 [====================>.........] - ETA: 3s
+12189696/17225924 [====================>.........] - ETA: 3s
+12345344/17225924 [====================>.........] - ETA: 3s
+12419072/17225924 [====================>.........] - ETA: 3s
+12574720/17225924 [====================>.........] - ETA: 3s
+12640256/17225924 [=====================>........] - ETA: 3s
+12812288/17225924 [=====================>........] - ETA: 3s
+13041664/17225924 [=====================>........] - ETA: 2s
+13058048/17225924 [=====================>........] - ETA: 2s
+13287424/17225924 [======================>.......] - ETA: 2s
+13303808/17225924 [======================>.......] - ETA: 2s
+13369344/17225924 [======================>.......] - ETA: 2s
+13549568/17225924 [======================>.......] - ETA: 2s
+13615104/17225924 [======================>.......] - ETA: 2s
+13811712/17225924 [=======================>......] - ETA: 2s
+13877248/17225924 [=======================>......] - ETA: 2s
+14065664/17225924 [=======================>......] - ETA: 2s
+14139392/17225924 [=======================>......] - ETA: 2s
+14327808/17225924 [=======================>......] - ETA: 1s
+14417920/17225924 [========================>.....] - ETA: 1s
+14606336/17225924 [========================>.....] - ETA: 1s
+14680064/17225924 [========================>.....] - ETA: 1s
+14868480/17225924 [========================>.....] - ETA: 1s
+14958592/17225924 [=========================>....] - ETA: 1s
+15147008/17225924 [=========================>....] - ETA: 1s
+15220736/17225924 [=========================>....] - ETA: 1s
+15425536/17225924 [=========================>....] - ETA: 1s
+15499264/17225924 [=========================>....] - ETA: 1s
+15704064/17225924 [==========================>...] - ETA: 1s
+15794176/17225924 [==========================>...] - ETA: 0s
+15982592/17225924 [==========================>...] - ETA: 0s
+15998976/17225924 [==========================>...] - ETA: 0s
+16121856/17225924 [===========================>..] - ETA: 0s
+16261120/17225924 [===========================>..] - ETA: 0s
+16293888/17225924 [===========================>..] - ETA: 0s
+16523264/17225924 [===========================>..] - ETA: 0s
+16539648/17225924 [===========================>..] - ETA: 0s
+16572416/17225924 [===========================>..] - ETA: 0s
+16711680/17225924 [============================>.] - ETA: 0s
+16818176/17225924 [============================>.] - ETA: 0s
+16875520/17225924 [============================>.] - ETA: 0s
+17096704/17225924 [============================>.] - ETA: 0s
+17113088/17225924 [============================>.] - ETA: 0s
+17154048/17225924 [============================>.] - ETA: 0s
+17227776/17225924 [==============================] - 12s 1us/step
+2019-05-31 01:52:32.446440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-05-31 01:52:32.446473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-31 01:52:32.446480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-05-31 01:52:32.446484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+2019-06-12 21:46:46.555936: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 21:46:46.666885: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 21:46:46.667751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 21:46:46.667769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:46:46.851610: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:46:46.851640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:46:46.851645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 21:46:46.851774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 21:46:51.991164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:46:51.991198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:46:51.991204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:46:51.991209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+Traceback (most recent call last):
+  File "videotest_example.py", line 50, in <module>
+    f=open("../record/record.txt","a")
+FileNotFoundError: [Errno 2] No such file or directory: '../record/record.txt'
+2019-06-12 21:49:20.711923: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 21:49:20.836688: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 21:49:20.837197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 21:49:20.837209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:49:21.001737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:49:21.001772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:49:21.001778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 21:49:21.001904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 21:49:26.123699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:49:26.123730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:49:26.123735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:49:26.123739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+2019-06-12 22:29:23.637011: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 22:29:23.746503: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 22:29:23.757083: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 22:29:23.757103: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:29:23.937419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:29:23.937449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:29:23.937454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 22:29:23.937583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10077 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 22:29:29.087818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:29:29.087852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:29:29.087858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:29:29.087861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+2019-06-12 22:34:22.376931: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 22:34:22.505107: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 22:34:22.505830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 22:34:22.505842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:34:22.677475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:34:22.677504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:34:22.677510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 22:34:22.677637: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 22:34:27.711854: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:34:27.711891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:34:27.711899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:34:27.711904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+2019-06-12 22:44:50.008739: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 22:44:50.123404: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 22:44:50.123897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 22:44:50.123909: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:44:50.313613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:44:50.313644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:44:50.313650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 22:44:50.314061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 22:44:55.387323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 22:44:55.387356: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 22:44:55.387362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 22:44:55.387367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!

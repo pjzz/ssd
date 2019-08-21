@@ -1,0 +1,1389 @@
+2019-05-31 01:52:13.087101: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-05-31 01:52:13.221358: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-31 01:52:13.221879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.52GiB
+2019-05-31 01:52:13.221891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-05-31 01:52:14.195902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-31 01:52:14.195931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-05-31 01:52:14.195937: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-05-31 01:52:14.196089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10174 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Downloading data from https://github.com/fchollet/deep-learning-models/releases/download/v0.6/mobilenet_1_0_224_tf_no_top.h5
+
+    8192/17225924 [..............................] - ETA: 6:00
+   40960/17225924 [..............................] - ETA: 2:24
+  106496/17225924 [..............................] - ETA: 1:23
+  245760/17225924 [..............................] - ETA: 47s 
+  458752/17225924 [..............................] - ETA: 38s
+ 1097728/17225924 [>.............................] - ETA: 17s
+ 1294336/17225924 [=>............................] - ETA: 17s
+ 1531904/17225924 [=>............................] - ETA: 15s
+ 1761280/17225924 [==>...........................] - ETA: 14s
+ 1777664/17225924 [==>...........................] - ETA: 15s
+ 2023424/17225924 [==>...........................] - ETA: 14s
+ 2269184/17225924 [==>...........................] - ETA: 13s
+ 2523136/17225924 [===>..........................] - ETA: 12s
+ 2531328/17225924 [===>..........................] - ETA: 13s
+ 2768896/17225924 [===>..........................] - ETA: 12s
+ 2785280/17225924 [===>..........................] - ETA: 12s
+ 3031040/17225924 [====>.........................] - ETA: 11s
+ 3047424/17225924 [====>.........................] - ETA: 12s
+ 3309568/17225924 [====>.........................] - ETA: 11s
+ 3571712/17225924 [=====>........................] - ETA: 10s
+ 3588096/17225924 [=====>........................] - ETA: 11s
+ 3850240/17225924 [=====>........................] - ETA: 10s
+ 4128768/17225924 [======>.......................] - ETA: 10s
+ 4390912/17225924 [======>.......................] - ETA: 9s 
+ 4407296/17225924 [======>.......................] - ETA: 10s
+ 4669440/17225924 [=======>......................] - ETA: 9s 
+ 4685824/17225924 [=======>......................] - ETA: 9s
+ 4947968/17225924 [=======>......................] - ETA: 9s
+ 4964352/17225924 [=======>......................] - ETA: 9s
+ 5226496/17225924 [========>.....................] - ETA: 8s
+ 5242880/17225924 [========>.....................] - ETA: 9s
+ 5521408/17225924 [========>.....................] - ETA: 8s
+ 5799936/17225924 [=========>....................] - ETA: 8s
+ 5816320/17225924 [=========>....................] - ETA: 8s
+ 6078464/17225924 [=========>....................] - ETA: 8s
+ 6094848/17225924 [=========>....................] - ETA: 8s
+ 6356992/17225924 [==========>...................] - ETA: 7s
+ 6373376/17225924 [==========>...................] - ETA: 7s
+ 6651904/17225924 [==========>...................] - ETA: 7s
+ 6668288/17225924 [==========>...................] - ETA: 7s
+ 6930432/17225924 [===========>..................] - ETA: 7s
+ 6946816/17225924 [===========>..................] - ETA: 7s
+ 7208960/17225924 [===========>..................] - ETA: 7s
+ 7225344/17225924 [===========>..................] - ETA: 7s
+ 7503872/17225924 [============>.................] - ETA: 6s
+ 7577600/17225924 [============>.................] - ETA: 6s
+ 7798784/17225924 [============>.................] - ETA: 6s
+ 8060928/17225924 [=============>................] - ETA: 6s
+ 8077312/17225924 [=============>................] - ETA: 6s
+ 8355840/17225924 [=============>................] - ETA: 6s
+ 8429568/17225924 [=============>................] - ETA: 6s
+ 8650752/17225924 [==============>...............] - ETA: 5s
+ 8658944/17225924 [==============>...............] - ETA: 5s
+ 8912896/17225924 [==============>...............] - ETA: 5s
+ 8937472/17225924 [==============>...............] - ETA: 5s
+ 9191424/17225924 [===============>..............] - ETA: 5s
+ 9216000/17225924 [===============>..............] - ETA: 5s
+ 9281536/17225924 [===============>..............] - ETA: 5s
+ 9510912/17225924 [===============>..............] - ETA: 5s
+ 9773056/17225924 [================>.............] - ETA: 5s
+ 9789440/17225924 [================>.............] - ETA: 5s
+10067968/17225924 [================>.............] - ETA: 4s
+10084352/17225924 [================>.............] - ETA: 4s
+10346496/17225924 [=================>............] - ETA: 4s
+10362880/17225924 [=================>............] - ETA: 4s
+10625024/17225924 [=================>............] - ETA: 4s
+10641408/17225924 [=================>............] - ETA: 4s
+10723328/17225924 [=================>............] - ETA: 4s
+10919936/17225924 [==================>...........] - ETA: 4s
+10936320/17225924 [==================>...........] - ETA: 4s
+11198464/17225924 [==================>...........] - ETA: 4s
+11214848/17225924 [==================>...........] - ETA: 4s
+11681792/17225924 [===================>..........] - ETA: 3s
+11698176/17225924 [===================>..........] - ETA: 3s
+11894784/17225924 [===================>..........] - ETA: 3s
+11911168/17225924 [===================>..........] - ETA: 3s
+12115968/17225924 [====================>.........] - ETA: 3s
+12189696/17225924 [====================>.........] - ETA: 3s
+12345344/17225924 [====================>.........] - ETA: 3s
+12419072/17225924 [====================>.........] - ETA: 3s
+12574720/17225924 [====================>.........] - ETA: 3s
+12640256/17225924 [=====================>........] - ETA: 3s
+12812288/17225924 [=====================>........] - ETA: 3s
+13041664/17225924 [=====================>........] - ETA: 2s
+13058048/17225924 [=====================>........] - ETA: 2s
+13287424/17225924 [======================>.......] - ETA: 2s
+13303808/17225924 [======================>.......] - ETA: 2s
+13369344/17225924 [======================>.......] - ETA: 2s
+13549568/17225924 [======================>.......] - ETA: 2s
+13615104/17225924 [======================>.......] - ETA: 2s
+13811712/17225924 [=======================>......] - ETA: 2s
+13877248/17225924 [=======================>......] - ETA: 2s
+14065664/17225924 [=======================>......] - ETA: 2s
+14139392/17225924 [=======================>......] - ETA: 2s
+14327808/17225924 [=======================>......] - ETA: 1s
+14417920/17225924 [========================>.....] - ETA: 1s
+14606336/17225924 [========================>.....] - ETA: 1s
+14680064/17225924 [========================>.....] - ETA: 1s
+14868480/17225924 [========================>.....] - ETA: 1s
+14958592/17225924 [=========================>....] - ETA: 1s
+15147008/17225924 [=========================>....] - ETA: 1s
+15220736/17225924 [=========================>....] - ETA: 1s
+15425536/17225924 [=========================>....] - ETA: 1s
+15499264/17225924 [=========================>....] - ETA: 1s
+15704064/17225924 [==========================>...] - ETA: 1s
+15794176/17225924 [==========================>...] - ETA: 0s
+15982592/17225924 [==========================>...] - ETA: 0s
+15998976/17225924 [==========================>...] - ETA: 0s
+16121856/17225924 [===========================>..] - ETA: 0s
+16261120/17225924 [===========================>..] - ETA: 0s
+16293888/17225924 [===========================>..] - ETA: 0s
+16523264/17225924 [===========================>..] - ETA: 0s
+16539648/17225924 [===========================>..] - ETA: 0s
+16572416/17225924 [===========================>..] - ETA: 0s
+16711680/17225924 [============================>.] - ETA: 0s
+16818176/17225924 [============================>.] - ETA: 0s
+16875520/17225924 [============================>.] - ETA: 0s
+17096704/17225924 [============================>.] - ETA: 0s
+17113088/17225924 [============================>.] - ETA: 0s
+17154048/17225924 [============================>.] - ETA: 0s
+17227776/17225924 [==============================] - 12s 1us/step
+2019-05-31 01:52:32.446440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-05-31 01:52:32.446473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-31 01:52:32.446480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-05-31 01:52:32.446484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+2019-06-12 21:46:46.555936: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 21:46:46.666885: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 21:46:46.667751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 21:46:46.667769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:46:46.851610: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:46:46.851640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:46:46.851645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 21:46:46.851774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 21:46:51.991164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:46:51.991198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:46:51.991204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:46:51.991209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+Traceback (most recent call last):
+  File "videotest_example.py", line 50, in <module>
+    f=open("../record/record.txt","a")
+FileNotFoundError: [Errno 2] No such file or directory: '../record/record.txt'
+2019-06-12 21:49:20.711923: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 21:49:20.836688: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-12 21:49:20.837197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.42GiB
+2019-06-12 21:49:20.837209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:49:21.001737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:49:21.001772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:49:21.001778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-12 21:49:21.001904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10076 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-12 21:49:26.123699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-12 21:49:26.123730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-12 21:49:26.123735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-12 21:49:26.123739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+  File "videotest_example.py", line 53
+    f.writelines("\")
+                    ^
+SyntaxError: EOL while scanning string literal
+2019-06-26 00:01:19.810361: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-26 00:01:19.919132: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-26 00:01:19.919692: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.34GiB
+2019-06-26 00:01:19.919706: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 00:01:20.076281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 00:01:20.076311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 00:01:20.076316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-26 00:01:20.076440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9998 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-26 00:01:25.010565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 00:01:25.010602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 00:01:25.010609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 00:01:25.010613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+2019-06-26 00:05:39.106183: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-26 00:05:39.221501: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-26 00:05:39.222025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.34GiB
+2019-06-26 00:05:39.222036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 00:05:39.379802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 00:05:39.379828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 00:05:39.379833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-26 00:05:39.379968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9998 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-26 00:05:44.261952: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 00:05:44.261986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 00:05:44.261992: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 00:05:44.261996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+2019-06-26 12:31:00.899871: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-26 12:31:01.013391: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-26 12:31:01.013910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:01:00.0
+totalMemory: 10.92GiB freeMemory: 10.34GiB
+2019-06-26 12:31:01.013922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 12:31:01.170246: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 12:31:01.170273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 12:31:01.170278: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-06-26 12:31:01.170406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9998 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-06-26 12:31:06.044683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-06-26 12:31:06.044717: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-26 12:31:06.044723: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-06-26 12:31:06.044727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+ok!
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), activation="relu", name="conv1_1", padding="same")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), activation="relu", name="conv1_2", padding="same")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", strides=(2, 2), padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), activation="relu", name="conv2_1", padding="same")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), activation="relu", name="conv2_2", padding="same")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", strides=(2, 2), padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_1", padding="same")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_2", padding="same")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_3", padding="same")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", strides=(2, 2), padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_1", padding="same")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_2", padding="same")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_3", padding="same")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", strides=(2, 2), padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_1", padding="same")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_2", padding="same")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_3", padding="same")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", strides=(1, 1), padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), activation="relu", name="fc6", padding="same", dilation_rate=(6, 6))`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), activation="relu", name="fc7", padding="same")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), activation="relu", name="conv6_1", padding="same")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv6_2", padding="same", activation="relu", strides=(2, 2))`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), activation="relu", name="conv7_1", padding="same")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv7_2", padding="valid", activation="relu", strides=(2, 2))`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), activation="relu", name="conv8_1", padding="same")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv8_2", padding="same", activation="relu", strides=(2, 2))`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Traceback (most recent call last):
+  File "videotest_example.py", line 44, in <module>
+    model.load_weights('../model/weight_name')
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/engine/network.py", line 1157, in load_weights
+    with h5py.File(filepath, mode='r') as f:
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '../model/weight_name', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2019-08-08 10:20:52.660492: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 10:20:52.791427: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 10:20:52.791970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 10:20:52.791981: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:20:54.142971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:20:54.143015: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:20:54.143026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 10:20:54.143276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 10:20:54.553736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:20:54.553769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:20:54.553781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:20:54.553785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", padding="same", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", padding="same", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool1", padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", padding="same", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", padding="same", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool2", padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", padding="same", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", padding="same", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", padding="same", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool3", padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", padding="same", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", padding="same", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", padding="same", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool4", padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", padding="same", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", padding="same", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", padding="same", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), strides=(1, 1), name="pool5", padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), padding="same", name="fc6", dilation_rate=(6, 6), activation="relu")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", padding="same", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", padding="same", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), strides=(2, 2), name="conv6_2", padding="same", activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", padding="same", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), name="conv7_2", padding="valid", activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", padding="same", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), name="conv8_2", padding="same", activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Done!
+ok!
+2019-08-08 10:28:29.826058: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 10:28:29.934035: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 10:28:29.934570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 10:28:29.934582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:28:30.103797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:28:30.103833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:28:30.103838: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 10:28:30.103997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 10:28:30.466078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:28:30.466111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:28:30.466116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:28:30.466119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), activation="relu", name="conv1_1", padding="same")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), activation="relu", name="conv1_2", padding="same")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), padding="same", name="pool1")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), activation="relu", name="conv2_1", padding="same")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), activation="relu", name="conv2_2", padding="same")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), padding="same", name="pool2")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_1", padding="same")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_2", padding="same")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", name="conv3_3", padding="same")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), padding="same", name="pool3")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_1", padding="same")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_2", padding="same")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv4_3", padding="same")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), padding="same", name="pool4")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_1", padding="same")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_2", padding="same")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", name="conv5_3", padding="same")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), strides=(1, 1), padding="same", name="pool5")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), padding="same", activation="relu", dilation_rate=(6, 6), name="fc6")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), activation="relu", name="fc7", padding="same")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), activation="relu", name="conv6_1", padding="same")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), strides=(2, 2), activation="relu", name="conv6_2", padding="same")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), activation="relu", name="conv7_1", padding="same")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), activation="relu", name="conv7_2", padding="valid")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), activation="relu", name="conv8_1", padding="same")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), activation="relu", name="conv8_2", padding="same")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv4_3_norm_mbox_loc")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), padding="same", name="conv4_3_norm_mbox_conf_2")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="fc7_mbox_loc")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="fc7_mbox_conf_2")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv6_2_mbox_loc")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv6_2_mbox_conf_2")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv7_2_mbox_loc")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv7_2_mbox_conf_2")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv8_2_mbox_loc")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv8_2_mbox_conf_2")`
+  name=name)(net['conv8_2'])
+Done!
+26.669203996658325
+ok!
+2019-08-08 10:37:47.179940: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 10:37:47.294918: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 10:37:47.295446: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 10:37:47.295457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:37:47.458141: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:37:47.458169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:37:47.458174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 10:37:47.458304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 10:37:47.824236: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:37:47.824269: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:37:47.824274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:37:47.824279: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", activation="relu", padding="same")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", activation="relu", padding="same")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", strides=(2, 2), padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", activation="relu", padding="same")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", activation="relu", padding="same")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", strides=(2, 2), padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", activation="relu", padding="same")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", activation="relu", padding="same")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", activation="relu", padding="same")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", strides=(2, 2), padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", activation="relu", padding="same")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", activation="relu", padding="same")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", activation="relu", padding="same")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", strides=(2, 2), padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", activation="relu", padding="same")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", activation="relu", padding="same")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", activation="relu", padding="same")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", strides=(1, 1), padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), name="fc6", dilation_rate=(6, 6), activation="relu", padding="same")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", activation="relu", padding="same")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", activation="relu", padding="same")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv6_2", padding="same", strides=(2, 2), activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", activation="relu", padding="same")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv7_2", padding="valid", strides=(2, 2), activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", activation="relu", padding="same")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv8_2", padding="same", strides=(2, 2), activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Done!
+28.007402896881104
+ok!
+2019-08-08 10:47:41.965877: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 10:47:42.081863: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 10:47:42.082492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 10:47:42.082505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:47:42.246097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:47:42.246128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:47:42.246134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 10:47:42.246267: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 10:47:42.614247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:47:42.614281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:47:42.614287: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:47:42.614291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", padding="same", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", padding="same", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool1", padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", padding="same", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", padding="same", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool2", padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", padding="same", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", padding="same", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", padding="same", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool3", padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", padding="same", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", padding="same", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", padding="same", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), strides=(2, 2), name="pool4", padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", padding="same", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", padding="same", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", padding="same", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), strides=(1, 1), name="pool5", padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), dilation_rate=(6, 6), name="fc6", padding="same", activation="relu")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", padding="same", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", padding="same", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), strides=(2, 2), activation="relu", name="conv6_2", padding="same")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", padding="same", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), activation="relu", name="conv7_2", padding="valid")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", padding="same", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), strides=(2, 2), activation="relu", name="conv8_2", padding="same")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Done!
+27.04484534263611
+ok!
+2019-08-08 10:58:01.658997: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 10:58:01.769747: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 10:58:01.770349: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 10:58:01.770362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:58:01.931662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:58:01.931691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:58:01.931696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 10:58:01.931820: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 10:58:02.292427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 10:58:02.292459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 10:58:02.292465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 10:58:02.292470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_1", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_2", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", strides=(2, 2), padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_1", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_2", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", strides=(2, 2), padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_1", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_2", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_3", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", strides=(2, 2), padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_1", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_2", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_3", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", strides=(2, 2), padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_1", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_2", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_3", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", strides=(1, 1), padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), padding="same", name="fc6", dilation_rate=(6, 6), activation="relu")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), padding="same", name="fc7", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), padding="same", name="conv6_1", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", strides=(2, 2), name="conv6_2", activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv7_1", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="valid", strides=(2, 2), name="conv7_2", activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv8_1", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", strides=(2, 2), name="conv8_2", activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Done!
+25.566150188446045
+ok!
+2019-08-08 11:20:02.398238: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 11:20:02.514103: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 11:20:02.514632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 11:20:02.514644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 11:20:02.676075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 11:20:02.676107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 11:20:02.676112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 11:20:02.676245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 11:20:03.036921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 11:20:03.036956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 11:20:03.036962: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 11:20:03.036966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_1", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_2", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", strides=(2, 2), name="pool1")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_1", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_2", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", strides=(2, 2), name="pool2")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_1", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_2", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_3", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", strides=(2, 2), name="pool3")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_1", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_2", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_3", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", strides=(2, 2), name="pool4")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_1", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_2", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_3", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), padding="same", strides=(1, 1), name="pool5")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), padding="same", dilation_rate=(6, 6), name="fc6", activation="relu")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), padding="same", name="fc7", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), padding="same", name="conv6_1", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", strides=(2, 2), name="conv6_2", activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv7_1", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="valid", strides=(2, 2), name="conv7_2", activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv8_1", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", strides=(2, 2), name="conv8_2", activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv4_3_norm_mbox_loc")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), padding="same", name="conv4_3_norm_mbox_conf_2")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="fc7_mbox_loc")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="fc7_mbox_conf_2")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv6_2_mbox_loc")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv6_2_mbox_conf_2")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv7_2_mbox_loc")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv7_2_mbox_conf_2")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv8_2_mbox_loc")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv8_2_mbox_conf_2")`
+  name=name)(net['conv8_2'])
+Done!
+25.762007474899292
+ok!
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", padding="same", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", padding="same", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", padding="same", strides=(2, 2))`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", padding="same", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", padding="same", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", padding="same", strides=(2, 2))`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", padding="same", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", padding="same", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", padding="same", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", padding="same", strides=(2, 2))`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", padding="same", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", padding="same", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", padding="same", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", padding="same", strides=(2, 2))`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", padding="same", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", padding="same", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", padding="same", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", padding="same", strides=(1, 1))`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), activation="relu", dilation_rate=(6, 6), padding="same", name="fc6")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", padding="same", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", padding="same", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv6_2", padding="same", strides=(2, 2), activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", padding="same", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv7_2", padding="valid", strides=(2, 2), activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", padding="same", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv8_2", padding="same", strides=(2, 2), activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Traceback (most recent call last):
+  File "videotest_example.py", line 44, in <module>
+    model.load_weights('../model/cow_ssd.h5')
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/engine/network.py", line 1157, in load_weights
+    with h5py.File(filepath, mode='r') as f:
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '../model/cow_ssd.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2019-08-08 14:24:27.155118: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 14:24:27.274739: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 14:24:27.275276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 14:24:27.275289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 14:24:27.437772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 14:24:27.437801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 14:24:27.437806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 14:24:27.437936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 14:24:27.797228: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 14:24:27.797260: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 14:24:27.797272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 14:24:27.797276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", padding="same", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", padding="same", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", padding="same", strides=(2, 2))`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", padding="same", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", padding="same", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", padding="same", strides=(2, 2))`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", padding="same", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", padding="same", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", padding="same", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", padding="same", strides=(2, 2))`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", padding="same", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", padding="same", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", padding="same", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", padding="same", strides=(2, 2))`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", padding="same", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", padding="same", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", padding="same", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", padding="same", strides=(1, 1))`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), activation="relu", name="fc6", padding="same", dilation_rate=(6, 6))`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", padding="same", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", padding="same", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", activation="relu", strides=(2, 2), name="conv6_2")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", padding="same", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="valid", activation="relu", strides=(2, 2), name="conv7_2")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", padding="same", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", activation="relu", strides=(2, 2), name="conv8_2")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Done!
+9.35226058959961
+ok!
+2019-08-08 14:46:05.534273: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-08 14:46:05.649202: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-08 14:46:05.649897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-08 14:46:05.649912: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 14:46:05.821063: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 14:46:05.821093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 14:46:05.821099: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-08 14:46:05.821234: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-08 14:46:06.192756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-08 14:46:06.192787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-08 14:46:06.192792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-08 14:46:06.192796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_1", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_2", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool1", strides=(2, 2))`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_1", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_2", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool2", strides=(2, 2))`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_1", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_2", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_3", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool3", strides=(2, 2))`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_1", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_2", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_3", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool4", strides=(2, 2))`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_1", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_2", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_3", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), padding="same", name="pool5", strides=(1, 1))`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), name="fc6", dilation_rate=(6, 6), activation="relu", padding="same")`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), padding="same", name="fc7", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), padding="same", name="conv6_1", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv6_2", activation="relu", strides=(2, 2))`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv7_1", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="valid", name="conv7_2", activation="relu", strides=(2, 2))`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv8_1", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv8_2", activation="relu", strides=(2, 2))`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv4_3_norm_mbox_loc")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), padding="same", name="conv4_3_norm_mbox_conf_2")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="fc7_mbox_loc")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="fc7_mbox_conf_2")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv6_2_mbox_loc")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv6_2_mbox_conf_2")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv7_2_mbox_loc")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv7_2_mbox_conf_2")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv8_2_mbox_loc")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv8_2_mbox_conf_2")`
+  name=name)(net['conv8_2'])
+Done!
+9.298734188079834
+ok!
+2019-08-15 23:28:23.819213: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-15 23:28:23.944438: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-15 23:28:23.944967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-15 23:28:23.944979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-15 23:28:24.103627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-15 23:28:24.103657: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-15 23:28:24.103662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-15 23:28:24.103793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-15 23:28:24.455650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-15 23:28:24.455683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-15 23:28:24.455688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-15 23:28:24.455693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_1", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), padding="same", name="conv1_2", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool1", strides=(2, 2))`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_1", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), padding="same", name="conv2_2", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool2", strides=(2, 2))`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_1", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_2", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), padding="same", name="conv3_3", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool3", strides=(2, 2))`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_1", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_2", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv4_3", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), padding="same", name="pool4", strides=(2, 2))`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_1", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_2", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), padding="same", name="conv5_3", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), padding="same", name="pool5", strides=(1, 1))`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), padding="same", name="fc6", activation="relu", dilation_rate=(6, 6))`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), padding="same", name="fc7", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), padding="same", name="conv6_1", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), activation="relu", padding="same", name="conv6_2", strides=(2, 2))`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv7_1", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", padding="valid", name="conv7_2", strides=(2, 2))`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), padding="same", name="conv8_1", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), activation="relu", padding="same", name="conv8_2", strides=(2, 2))`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv4_3_norm_mbox_loc")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), padding="same", name="conv4_3_norm_mbox_conf_2")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="fc7_mbox_loc")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="fc7_mbox_conf_2")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv6_2_mbox_loc")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv6_2_mbox_conf_2")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv7_2_mbox_loc")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv7_2_mbox_conf_2")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), padding="same", name="conv8_2_mbox_loc")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), padding="same", name="conv8_2_mbox_conf_2")`
+  name=name)(net['conv8_2'])
+Done!
+25.79218864440918
+ok!
+Using TensorFlow backend.
+../model/ssd.py:40: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_1", padding="same", activation="relu")`
+  name='conv1_1')(net['input'])
+../model/ssd.py:44: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(64, (3, 3), name="conv1_2", padding="same", activation="relu")`
+  name='conv1_2')(net['conv1_1'])
+../model/ssd.py:46: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool1", strides=(2, 2), padding="same")`
+  name='pool1')(net['conv1_2'])
+../model/ssd.py:51: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_1", padding="same", activation="relu")`
+  name='conv2_1')(net['pool1'])
+../model/ssd.py:55: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (3, 3), name="conv2_2", padding="same", activation="relu")`
+  name='conv2_2')(net['conv2_1'])
+../model/ssd.py:57: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool2", strides=(2, 2), padding="same")`
+  name='pool2')(net['conv2_2'])
+../model/ssd.py:62: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_1", padding="same", activation="relu")`
+  name='conv3_1')(net['pool2'])
+../model/ssd.py:66: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_2", padding="same", activation="relu")`
+  name='conv3_2')(net['conv3_1'])
+../model/ssd.py:70: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv3_3", padding="same", activation="relu")`
+  name='conv3_3')(net['conv3_2'])
+../model/ssd.py:72: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool3", strides=(2, 2), padding="same")`
+  name='pool3')(net['conv3_3'])
+../model/ssd.py:77: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_1", padding="same", activation="relu")`
+  name='conv4_1')(net['pool3'])
+../model/ssd.py:81: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_2", padding="same", activation="relu")`
+  name='conv4_2')(net['conv4_1'])
+../model/ssd.py:85: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv4_3", padding="same", activation="relu")`
+  name='conv4_3')(net['conv4_2'])
+../model/ssd.py:87: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((2, 2), name="pool4", strides=(2, 2), padding="same")`
+  name='pool4')(net['conv4_3'])
+../model/ssd.py:92: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_1", padding="same", activation="relu")`
+  name='conv5_1')(net['pool4'])
+../model/ssd.py:96: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_2", padding="same", activation="relu")`
+  name='conv5_2')(net['conv5_1'])
+../model/ssd.py:100: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv5_3", padding="same", activation="relu")`
+  name='conv5_3')(net['conv5_2'])
+../model/ssd.py:102: UserWarning: Update your `MaxPooling2D` call to the Keras 2 API: `MaxPooling2D((3, 3), name="pool5", strides=(1, 1), padding="same")`
+  name='pool5')(net['conv5_3'])
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:304: UserWarning: The `AtrousConvolution2D` layer  has been deprecated. Use instead the `Conv2D` layer with the `dilation_rate` argument.
+  warnings.warn('The `AtrousConvolution2D` layer '
+/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/legacy/layers.py:308: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (3, 3), name="fc6", activation="relu", padding="same", dilation_rate=(6, 6))`
+  return Conv2D(*args, **kwargs)
+../model/ssd.py:110: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(1024, (1, 1), name="fc7", padding="same", activation="relu")`
+  border_mode='same', name='fc7')(net['fc6'])
+../model/ssd.py:115: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (1, 1), name="conv6_1", padding="same", activation="relu")`
+  name='conv6_1')(net['fc7'])
+../model/ssd.py:118: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(512, (3, 3), name="conv6_2", strides=(2, 2), padding="same", activation="relu")`
+  name='conv6_2')(net['conv6_1'])
+../model/ssd.py:122: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv7_1", padding="same", activation="relu")`
+  name='conv7_1')(net['conv6_2'])
+../model/ssd.py:126: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv7_2", strides=(2, 2), padding="valid", activation="relu")`
+  name='conv7_2')(net['conv7_2'])
+../model/ssd.py:130: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(128, (1, 1), name="conv8_1", padding="same", activation="relu")`
+  name='conv8_1')(net['conv7_2'])
+../model/ssd.py:133: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(256, (3, 3), name="conv8_2", strides=(2, 2), padding="same", activation="relu")`
+  name='conv8_2')(net['conv8_1'])
+../model/ssd.py:140: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv4_3_norm_mbox_loc", padding="same")`
+  name='conv4_3_norm_mbox_loc')(net['conv4_3_norm'])
+../model/ssd.py:148: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(6, (3, 3), name="conv4_3_norm_mbox_conf_2", padding="same")`
+  name=name)(net['conv4_3_norm'])
+../model/ssd.py:160: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="fc7_mbox_loc", padding="same")`
+  name='fc7_mbox_loc')(net['fc7'])
+../model/ssd.py:168: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="fc7_mbox_conf_2", padding="same")`
+  name=name)(net['fc7'])
+../model/ssd.py:178: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv6_2_mbox_loc", padding="same")`
+  name='conv6_2_mbox_loc')(net['conv6_2'])
+../model/ssd.py:186: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv6_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv6_2'])
+../model/ssd.py:197: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv7_2_mbox_loc", padding="same")`
+  name='conv7_2_mbox_loc')(net['conv7_2'])
+../model/ssd.py:205: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv7_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv7_2'])
+../model/ssd.py:216: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(24, (3, 3), name="conv8_2_mbox_loc", padding="same")`
+  name='conv8_2_mbox_loc')(net['conv8_2'])
+../model/ssd.py:224: UserWarning: Update your `Conv2D` call to the Keras 2 API: `Conv2D(12, (3, 3), name="conv8_2_mbox_conf_2", padding="same")`
+  name=name)(net['conv8_2'])
+Traceback (most recent call last):
+  File "videotest_example.py", line 44, in <module>
+    model.load_weights('../model/ssd_pedestrian.h5')
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/engine/network.py", line 1166, in load_weights
+    f, self.layers, reshape=reshape)
+  File "/home/zz/.pyenv/versions/3.5.5/lib/python3.5/site-packages/keras/engine/saving.py", line 1030, in load_weights_from_hdf5_group
+    str(len(filtered_layers)) + ' layers.')
+ValueError: You are trying to load a weight file containing 39 layers into a model with 34 layers.
+2019-08-16 00:41:31.727670: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-16 00:41:31.857395: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-16 00:41:31.858075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-16 00:41:31.858089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 00:41:32.018012: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 00:41:32.018042: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 00:41:32.018047: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-16 00:41:32.018181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-16 00:41:36.764784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 00:41:36.764818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 00:41:36.764824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 00:41:36.764828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+18.97986125946045
+ok!
+2019-08-16 00:49:00.639791: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-16 00:49:00.760309: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-16 00:49:00.760847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-16 00:49:00.760858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 00:49:00.919166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 00:49:00.919195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 00:49:00.919213: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-16 00:49:00.919353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-16 00:49:05.710855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 00:49:05.710919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 00:49:05.711087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 00:49:05.711108: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+18.573322534561157
+ok!
+2019-08-16 01:11:14.188943: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-16 01:11:14.313822: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-16 01:11:14.314352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-08-16 01:11:14.314364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 01:11:14.468167: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 01:11:14.468197: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 01:11:14.468202: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-08-16 01:11:14.468330: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10409 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2019-08-16 01:11:19.256166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-08-16 01:11:19.256201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-16 01:11:19.256211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-08-16 01:11:19.256217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+Using TensorFlow backend.
+Done!
+19.36949920654297
+ok!
